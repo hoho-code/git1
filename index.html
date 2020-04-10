@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <style>
+      body {
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #E9EAED;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+  </style>
+
+</head>
+
+<body>
+  
+    <div id="xuanran">
+
+    </div>
+    <script>
+
+        $.ajax({
+            type: "GET",
+            url: "https://cnodejs.org/api/v1/topics",
+            data: {},
+            dataType: "html",
+            success: function (res) {
+                console.log(res)
+                document.getElementById("xuanran").innerHTML = res
+            }
+        });
+    </script>
+</body>
+
+</html>
